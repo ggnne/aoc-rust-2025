@@ -1,4 +1,5 @@
 mod day01;
+mod day03;
 
 #[derive(Clone, Copy, Debug)]
 pub enum Part {
@@ -20,6 +21,7 @@ pub trait AdventDay {
 pub fn get_day(day: u8) -> Option<Box<dyn AdventDay>> {
     match day {
         1 => Some(Box::new(day01::Day01)),
+        3 => Some(Box::new(day03::Day03)),
         _ => None,
     }
 }
